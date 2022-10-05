@@ -25,7 +25,8 @@ export default function Chatlist(props: any)
                 );
                 const json_res = await res.json();
                 setChatlist(json_res);
-                console.log(json_res)
+                setActive(json_res[0].chat_id);
+                console.log(json_res, 'res')
                 return json_res;
             }
 
